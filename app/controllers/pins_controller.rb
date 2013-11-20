@@ -10,7 +10,6 @@ class PinsController < ApplicationController
   
   def show
   end
-
   
   def new
     @pin = current_user.pins.build
@@ -57,6 +56,6 @@ class PinsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pin_params
-      params.require(:pin).permit(:description)
+      params.require(:pin).permit(:description, :image)
     end
 end
